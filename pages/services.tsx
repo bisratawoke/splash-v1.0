@@ -1,5 +1,5 @@
 import {ReactElement} from 'react';
-import NavBar,{navItemtype,positionType} from '../components/indexComponents/NavBar';
+import NavBar,{navItemType,positionType} from '../components/indexComponents/NavBar';
 import Link from 'next/link';
 import Section,{imgType,descriptionType} from '../components/servicesComponents/Section';
 
