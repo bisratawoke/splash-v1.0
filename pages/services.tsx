@@ -82,7 +82,7 @@ const description:descriptionType = {
 
 //services component
 
-const services = ():ReactElement => {
+const services = ()=> {
 
 	
 	
