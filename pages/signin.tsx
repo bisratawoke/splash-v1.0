@@ -78,7 +78,7 @@ const position:positionType = {
 }
 
 //main component
-const signin = ():React.ReactElement => {
+const signin = ()=> {
 	
 	const [emailEmpty,setEmailEmpty] = useState< boolean >(false);
 	

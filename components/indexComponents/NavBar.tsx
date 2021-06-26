@@ -1,4 +1,4 @@
-import {ReactElement} from 'react';
+
 import Link from 'next/link';
 
 //navitem props
@@ -31,7 +31,7 @@ export interface positionType{
 	colCount:number;
 	
 }
-const NavBar = ({navItems,position}:navItemProps):ReactElement => {
+const NavBar = ({navItems,position}:navItemProps) => {
 
 
 	return (

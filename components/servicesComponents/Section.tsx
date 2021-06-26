@@ -58,7 +58,7 @@ export interface sectionType{
 
 //section component
 
-const Section = ({img,description,sectionStyle}:sectionType):React.Element => {
+const Section = ({img,description,sectionStyle}:sectionType)=> {
 
 	return (
 		

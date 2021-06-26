@@ -76,7 +76,7 @@ const position:positionType = {
 	colCount:4
 	
 }
-const signup = ():React.ReactElement => {
+const signup = ()=> {
     return (
         <div className="h-screen w-screen">
         	

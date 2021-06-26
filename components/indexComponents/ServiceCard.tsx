@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 
 export interface params{
 
@@ -9,7 +9,7 @@ export interface params{
 
 }
 
-function ServiceCard({title,imgSrc,footer,bgColor}:params):ReactElement {
+function ServiceCard({title,imgSrc,footer,bgColor}:params) {
     return (
         <div className={`bg-${bgColor}-500 flex flex-col border-l-2 border-r-2 cursor-pointer hover:bg-gray-500`}>
 
