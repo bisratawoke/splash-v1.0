@@ -1,11 +1,11 @@
 import React,{useContext,useRef,useEffect,useState} from 'react';
 import {Context} from '../components/state/state';
 import Link from 'next/link'
-import NavBar,{NavItemType,positionType} from '../components/indexComponents/NavBar';
+import NavBar,{navItemType,positionType} from '../components/indexComponents/NavBar';
 
 //nav items
 
-const navItems:Array<NavItemType> = [
+const navItems:Array<navItemType> = [
 	
 	{
 		name:'documentation',
