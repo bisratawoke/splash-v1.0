@@ -90,7 +90,7 @@ const signin = ()=> {
 
     useEffect(() => {
         
-        formRef.current.addEventListener('submit',(async(e):Promise<void> | void => {
+        formRef.current.addEventListener('submit',(async(e)=> {
 			
 			
 			try{
