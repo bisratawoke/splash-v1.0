@@ -53,7 +53,7 @@ const navItems:Array<navItemType> = [
 		
 		name:'signup',
 		
-		bgcolor:'yellow',
+		bgcolor:'black',
 		
 		path:'/signup',
 		
