@@ -3,7 +3,7 @@ import {createContext} from 'react';
 //init state
 export const state = {
 
-    apiUrl:"http://account/api/account"
+    apiUrl:"http://api/account"
 
 }
 //context creation
