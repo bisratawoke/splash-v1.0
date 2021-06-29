@@ -3,7 +3,7 @@ import {createContext} from 'react';
 //init state
 export const state = {
 
-    apiUrl:"http://swiftbase.com/api/account"
+    apiUrl:"http://account/api/account"
 
 }
 //context creation
