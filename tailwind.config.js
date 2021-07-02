@@ -10,7 +10,7 @@ module.exports = {
         'services-section':'800px',
         'footer-section':'150px',
         'lg':'900px',
-         'md':'400px',
+        'md':'400px',
         
       }
 

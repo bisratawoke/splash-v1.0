@@ -53,7 +53,7 @@ const navItems:Array<navItemType> = [
 		
 		name:'signup',
 		
-		bgcolor:'black',
+		bgcolor:'yellow',
 		
 		path:'/signup',
 		
@@ -87,6 +87,8 @@ const signin = ()=> {
     const formRef = useRef< HTMLFormElement | null >(null);
 
     const state = useContext(Context);
+    
+    const [mssg,setMssg] = useState(null);
 
     useEffect(() => {
         
@@ -125,6 +127,9 @@ const signin = ()=> {
 		        	password:e.target.password.value
 		        	
 		        }
+		        
+		        
+		        
 		        //request options
 		        const opt = {
 		        
@@ -143,6 +148,28 @@ const signin = ()=> {
 		        const response = await fetch(`${state.apiUrl}/login`,opt);
 		        
 		        console.log(response.status);
+		        
+		        if(response.status == 200) {
+		        
+		        	const result = await response.json();
+		     		
+		     		console.log(result.message);
+		     		
+		        	window.localStorage.setItem('swiftbaseToken',result.message);
+		        	
+		        	e.target.email.value == "";
+		        	
+		        	e.target.password.value == "";
+		        	
+		        	setMssg('logged in succesfully');
+		        
+		        }
+		        
+		        else {
+		        	
+		        	setMssg('failed to login \n please make sure to enter your credentials correctly')
+		        
+		        }
 		       
 		      }catch(err) {
 		      
@@ -187,6 +214,16 @@ const signin = ()=> {
                                  	(<span className="text-sm font-mono font-bold text-red-400 mt-1">password field must be filled</span> ): 
                                  	(<span className="hidden"></span>)
                                  
+                                  }
+                                  
+                                  {
+                                  
+                                  	mssg ? (
+                                  	
+                                  		<span className="text-sm font-mono font-bold text-blue-400 mt-1">{mssg}</span>
+                                  	
+                                  	):(<></>)
+                                  
                                   }
                             </div>
 

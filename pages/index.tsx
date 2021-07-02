@@ -79,11 +79,11 @@ function index() {
                 
 
 
-                <div className="h-section  grid grid-cols-12 border-t-2 border-b-2">
+                <div className="h-md  grid grid-cols-12 border-t-2 border-b-2">
                     
-                    <div className="col-start-2 col-end-6 flex pb-10 ">
+                    <div className="col-start-2 col-end-6 flex ">
 
-                        <img src="/money.png" className="h-section rounded-lg" style={{}}/>
+                        <img src="/money.png" className=" rounded-lg" style={{}}/>
                     
                     </div>
 
@@ -118,13 +118,13 @@ function index() {
                         <div className="grid grid-cols-4 gap-5 col-start-2 col-end-12 bg-white-400">
                             {
                                 [
-                                    {title:'Frontend deploment',imgSrc:"/frontend.png",footer:"You give us your static files ie html , css, javascript files and we deploy them with free tls encryption ",bgColor:"blue"},
+                                    {title:'Frontend deploment',imgSrc:"/frontend.png",footer:"deploy frontend app with swiftbase",bgColor:"white"},
                                     
-                                    {title:'backend-deployment',imgSrc:"/backend.jpg",footer:"Deploy your api and servers using popular languges and frameworks such as node js , python-flask and php ",bgColor:"red"},
+                                    {title:'backend-deployment',imgSrc:"/backend.jpg",footer:"Deploy your api and servers with swiftbae ",bgColor:"white"},
                                     
-                                    {title:'Sql database deployment',imgSrc:"/sql.jpg",footer:"Use our sql servers to store data that can later be used by your api using swiftbase",bgColor:"yellow"},
+                                    {title:'Sql database deployment',imgSrc:"/sql.jpg",footer:"Use our sql servers to store data that can later be used by your api using swiftbase",bgColor:"white"},
                                     
-                                    {title:'no sql database deployment',imgSrc:"/no-sql-3.png",footer:"If your less tradition we also offer a no sql database which you can use to store your data",bgColor:"green"}
+                                    {title:'no sql database deployment',imgSrc:"/mongodb.png",footer:"If your less tradition we also offer a no sql database which you can use to store your data",bgColor:"white"}
                                 
                                 ].map((item:params):ReactElement => (
 

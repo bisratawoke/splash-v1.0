@@ -11,11 +11,11 @@ export interface params{
 
 function ServiceCard({title,imgSrc,footer,bgColor}:params) {
     return (
-        <div className={`bg-${bgColor}-500 flex flex-col border-l-2 border-r-2 cursor-pointer hover:bg-gray-500`}>
+        <div className={`bg-${bgColor}-500 flex flex-col border-2 cursor-pointer mt-10 rounded-lg hover:bg-gray-500`}>
 
             <div className="h-20  flex items-center justify-center">
                 
-                <span className="font-sans font-bold text-lg text-white"> {title} </span>
+                <span className="font-sans font-bold text-lg text-gray-400"> {title} </span>
                 
             </div> 
             <div className="flex-grow flex ">
@@ -24,7 +24,7 @@ function ServiceCard({title,imgSrc,footer,bgColor}:params) {
             </div>
             <div className="h-20 bg-white-100 pl-5 ">
                 
-                <span className="text-white font-sans font-bold text-md">{footer}</span>
+                <span className="text-gray-400 font-sans font-bold text-md">{footer}</span>
             
             </div>
         

@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useRef,useEffect,useContext,useState} from 'react';
+import {Context} from '../components/state/state';
 import Link from 'next/link';
 
 import NavBar,{navItemType,positionType} from '../components/indexComponents/NavBar';
@@ -77,6 +78,68 @@ const position:positionType = {
 	
 }
 const signup = ()=> {
+
+	const formRef = useRef(null);
+	
+	const state = useContext(Context);
+	
+	const [mssg,setMssg] = useState(null);
+	
+	useEffect(() => {
+	
+		formRef.current.addEventListener('submit',async(e:any) => {
+				
+			e.preventDefault();
+			
+			try{
+				
+				const userInfo = {
+				
+					email:e.target.email.value,
+					
+					password:e.target.password.value
+				
+				}
+				
+				const opt = {
+					
+					headers:{
+					
+						'Content-Type':'application/json'
+					},
+					
+					method:'POST',
+					
+					body:JSON.stringify(userInfo)
+				
+				}
+				
+				
+				const response = await fetch(`${state.apiUrl}/register`,opt);
+				
+				console.log(response.status);
+				
+				if(response.status == 200) {
+				
+					setMssg('registerd succesfully ');
+				}
+				
+				else {
+				
+					setMssg('registration failed please tryp again later');
+				}
+			
+			}catch(err) {
+			
+			
+				console.log(err);
+			
+			}
+		
+		
+		})
+	
+	} ,[])
     return (
         <div className="h-screen w-screen">
         	
@@ -92,7 +155,7 @@ const signup = ()=> {
                     
                     <div className="col-start-2 col-end-12  row-start-2 row-span-4 flex">
 
-                        <form className="flex flex-col flex-grow" >
+                        <form className="flex flex-col flex-grow" ref={formRef}>
 
                             <div className="flex-grow  flex flex-col justify-center">
                                 <span className="text-md font-serif font-bold mb-1  text-gray-400">Email</span>
@@ -115,7 +178,14 @@ const signup = ()=> {
 
                                 <span className="text-md font-serif font-bold mb-1 text-gray-400">Country</span>
                                 <input type="text" placeholder="enter country name ps not required" className="h-10 border-2" name="country"/>
-
+								
+								{
+								
+									mssg ? (
+									
+										<span className="text-sm font-mono font-bold text-blue-400 mt-1">{mssg}</span>
+									):(<></>)
+								}
                             </div>
 
 

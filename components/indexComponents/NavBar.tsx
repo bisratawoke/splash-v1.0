@@ -60,7 +60,7 @@ const NavBar = ({navItems,position}:navItemProps) => {
 						
 						{navItems.map(item => (
 							
-						<span className={` font-sans font-medium flex items-center justify-center hover:bg-${item.hoverBg}-300 hover:text-gray-400  text-${item.textColor} bg-${item.bgcolor}-400 cursor-pointer`}>
+						<span className={` font-sans font-medium flex items-center justify-center hover:bg-${item.hoverBg}-300 hover:text-gray-400  text-${item.textColor} bg-${item.bgcolor}-400 cursor-pointer`} key={`${item.name}`}>
 
                             <Link href={`${item.path}`}>{`${item.name}`}</Link>
 
