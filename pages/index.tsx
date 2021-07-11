@@ -15,7 +15,7 @@ function index() {
                         </div>
                         <div className="col-start-6 col-end-13  items-center justify-start font-serif flex">
 
-                            <span className="text-xlg font-bold text-gray-400">SwiftBase</span>
+                            <span className="text-xlg font-normal text-gray-500">SwiftBase</span>
 
 
                         </div>
