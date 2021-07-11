@@ -11,7 +11,7 @@ module.exports = {
         'footer-section':'150px',
         'lg':'900px',
         'md':'400px',
-        
+        'sm':'80px'
       }
 
 
