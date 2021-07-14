@@ -154,14 +154,14 @@ const signin = ()=> {
 		        	const result = await response.json();
 		     		
 		     		console.log(result.message);
-		     		
-		        	window.localStorage.setItem('swiftbaseToken',result.message);
 		        	
 		        	e.target.email.value == "";
 		        	
 		        	e.target.password.value == "";
 		        	
 		        	setMssg('logged in succesfully');
+				
+				window.location.assign(`http://project.swiftbase.com?token=${result.message}`);
 		        
 		        }
 		        
